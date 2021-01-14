@@ -1,3 +1,3 @@
-function ohayou1() {
-  alert("Hello1!");
+function funcBluetooth() {
+  alert("BlueToothモジュールテスト");
 }

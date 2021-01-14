@@ -86,9 +86,9 @@ $.ajax({
     type: "POST",
 
     // Request body.
-    data: file_azure,
+    data: file,
     processData: false,
-    cache : false
+   // cache : false
 })
 
 

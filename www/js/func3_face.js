@@ -1,4 +1,5 @@
 
+
 var age = 0;                // 年齢'
 var gender = 0;             // 性別 （male/female)
 var emoSmile = 0;           // 笑顔'
@@ -109,3 +110,10 @@ $.ajax({
     alert(errorString);
     console.log(errorString);
 });
+=======
+function ohayou3() {
+  alert("Hello3!");
+
+  alert("Hello1!");
+}
+>>>>>>> cb7920446ebb2ca9b9eb14e374d45cbe2e0700b2

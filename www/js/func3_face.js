@@ -48,8 +48,8 @@ function ohayou3() {
 var emo=[8];
 var max;
 var emotion=0;
-var x=[];
-var y=[];
+var x;
+var y;
 
 function azureFunc(file){
 var area = "westus"; 
@@ -58,7 +58,7 @@ var uriBase = "https://" + area + ".api.cognitive.microsoft.com/face/v1.0/detect
      
 var params = {
     "returnFaceId": "true",
-    "returnFaceLandmarks": "false",
+    "returnFaceLandmarks": "true",
     "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
 };
 
@@ -107,8 +107,8 @@ $.ajax({
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
        emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
 
-       x[0]=data["0"].faceLandmarks.noseTip.x;
-       y[0]=data["0"].faceLandmarks.noseTip.y;
+       x= Math.floor(data["0"].faceLandmarks.noseTip.x);
+       y= Math.floor(data["0"].faceLandmarks.noseTip.y);
 
 
     }
@@ -147,8 +147,8 @@ if(emotion==7){
 if(emo[8]==false){
  alert("マスクちゃんとつけて！！！！！");
 }
-alert(x[0]);
-alert(y[0]);
+alert(x);
+alert(y);
 
 })
 //失敗時！

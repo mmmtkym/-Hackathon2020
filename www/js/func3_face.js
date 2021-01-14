@@ -1,5 +1,5 @@
 
-function ohayou3() {
+function funcFace() {
   alert("Hello3!");
 
 // カメラ準備

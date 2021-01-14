@@ -58,7 +58,7 @@ var uriBase = "https://" + area + ".api.cognitive.microsoft.com/face/v1.0/detect
      
 var params = {
     "returnFaceId": "true",
-    "returnFaceLandmarks": "false",
+    "returnFaceLandmarks": "true",
     "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
 };
 

@@ -109,13 +109,13 @@ $.ajax({
 
        x[0]= Math.floor(data["0"].faceLandmarks.noseTip.x);
        y[0]= Math.floor(data["0"].faceLandmarks.noseTip.y);
-      x[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.x);
-      y[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.y);
+      //x[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.x);
+     // y[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.y);
 
-alert(x[0]);
-alert(x[1]);
-alert(y[0]);
-alert(y[1]);
+      alert(x[0]);
+      alert(x[1]);
+      alert(y[0]);
+      alert(y[1]);
     }
     max=emo[0];
     // FaceAPIから取得した情報を使います

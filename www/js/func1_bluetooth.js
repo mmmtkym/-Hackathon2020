@@ -7,3 +7,8 @@ function funcBluetooth(){
       });
     }, false);
 }
+
+//list.length()に格納する
+//その数を表示する
+//3で割る
+//密度がxxなら、xxと測定する

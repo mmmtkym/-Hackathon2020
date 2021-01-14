@@ -48,6 +48,8 @@ function ohayou3() {
 var emo=[8];
 var max;
 var emotion=0;
+var x=[];
+var y=[];
 
 function azureFunc(file){
 var area = "westus"; 
@@ -103,7 +105,10 @@ $.ajax({
        emo[6] = Math.floor(data["0"].faceAttributes.emotion.sadness * 100);      
        // 感嘆
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
-       emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded
+       emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
+
+       x[0]=data["0"].faceLandmarks.noseTip.x;
+       y[0]=data["0"].faceLandmarks.noseTip.y;
 
 
     }
@@ -142,6 +147,9 @@ if(emotion==7){
 if(emo[8]==false){
  alert("マスクちゃんとつけて！！！！！");
 }
+alert(x[0]);
+alert(y[0]);
+
 })
 //失敗時！
 .fail(function(jqXHR, textStatus, errorThrown) {

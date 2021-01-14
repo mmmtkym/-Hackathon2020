@@ -48,8 +48,8 @@ function funcFace() {
 var emo=[8];
 var max;
 var emotion=0;
-var x=[1];
-var y=[1];
+var x=[2];
+var y=[2];
 
 function azureFunc(file){
 var area = "westus"; 
@@ -109,7 +109,7 @@ $.ajax({
 
        x[0]= Math.floor(data["0"].faceLandmarks.noseTip.x);
        y[0]= Math.floor(data["0"].faceLandmarks.noseTip.y);
-       x[1]=Math.floor(data["0"].faceLandmarks.UnderLipBottom.x);
+       x[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.x);
       y[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.y);
 
 

@@ -115,28 +115,28 @@ if(max<emo[i]){
   emotion=i;
 }
 }
-if(i==0){
+if(emotion==0){
   alert("怒り");
 }
- if(i==1){
+ if(emotion==1){
   alert("不面目");
 }
-if(i==2){
+if(emotion==2){
   alert("嫌気");
 }
-if(i==3){
+if(emotion==3){
   alert("恐怖");
 }
-if(i==4){
+if(emotion==4){
   alert("幸福");
 }
-if(i==5){
+if(emotion==5){
   alert("無感動");
 }
-if(i==6){
+if(emotion==6){
   alert("悲しみ");
 }
-if(i==7){
+if(emotion==7){
   alert("感嘆");
 }
 })

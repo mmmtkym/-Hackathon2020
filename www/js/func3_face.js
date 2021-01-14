@@ -64,8 +64,9 @@ var glasses = 0;            // メガネ (NoGlasses/ReadingGlasses/Sunglasses/Sw
 
 
 function azureFunc(file){
+var area = "westus"; 
 var subscriptionKey = "0a50c6d56ddb41c98f952861abe8c050" 
-var uriBase = "https://faceplay.cognitiveservices.azure.com/";
+var uriBase = "https://" + area + ".api.cognitive.microsoft.com/face/v1.0/detect";
      
 var params = {
     "returnFaceId": "true",

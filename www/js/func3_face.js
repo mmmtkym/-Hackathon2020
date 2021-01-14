@@ -112,7 +112,7 @@ $.ajax({
        //x[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.x);
       //y[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.y);
 
-   emo[8]= data["0"].faceAttributes.glasses;
+   emo[8]= data["0"].faceAttributes.mask;
 
 
     }

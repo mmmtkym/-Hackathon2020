@@ -63,7 +63,7 @@ var hairInvisible = 0;      // スキンヘッド (true/false)
 var glasses = 0;            // メガネ (NoGlasses/ReadingGlasses/Sunglasses/SwimmingGoggles)
 
 
-
+function azureFunc(file){
 var subscriptionKey = "0a50c6d56ddb41c98f952861abe8c050" 
 var uriBase = "https://faceplay.cognitiveservices.azure.com/";
      
@@ -156,4 +156,5 @@ $.ajax({
     console.log(errorString);
 });
 
+}
 }

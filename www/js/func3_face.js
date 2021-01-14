@@ -45,7 +45,7 @@ function ohayou3() {
     }
 
 
-var emo=[7];
+var emo=[8];
 var max;
 var emotion=0;
 
@@ -103,7 +103,7 @@ $.ajax({
        emo[6] = Math.floor(data["0"].faceAttributes.emotion.sadness * 100);      
        // 感嘆
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
-       
+       emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded
 
 
     }
@@ -139,8 +139,8 @@ if(emotion==6){
 if(emotion==7){
   alert("感嘆");
 }
-if(data["0"].faceAttributes.occlusion.mouthOccluded==false){
- alert("鼻まで隠して");
+if(emo[8]==false){
+ alert("マスクちゃんとつけて！！！！！");
 }
 })
 //失敗時！

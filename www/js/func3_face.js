@@ -48,8 +48,8 @@ function ohayou3() {
 var emo=[8];
 var max;
 var emotion=0;
-var x=[];
-var y=[];
+var x=[10];
+var y=[10];
 
 function azureFunc(file){
 var area = "westus"; 
@@ -107,8 +107,8 @@ $.ajax({
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
        emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
 
-       x[0]=data["0"].faceLandmarks.noseTip.x;
-       y[0]=data["0"].faceLandmarks.noseTip.y;
+       x[0]= data["0"].faceLandmarks.noseTip.x;
+       y[0]= data["0"].faceLandmarks.noseTip.y;
 
 
     }

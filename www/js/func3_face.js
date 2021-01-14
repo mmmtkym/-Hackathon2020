@@ -117,7 +117,7 @@ $.ajax({
 
     }
     max=emo[0];
-     FaceAPIから取得した情報を使います
+    // FaceAPIから取得した情報を使います
     if(y[0]=="undefined" && y[1]=="undefined"){
       alert("マスクは正しく装着されています");
     }else if(y[1]=="undefined"){

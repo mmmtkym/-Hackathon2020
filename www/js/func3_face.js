@@ -1,6 +1,6 @@
 
 function funcFace() {
-  alert("Hello3!");
+
 
 // カメラ準備
     var options = {

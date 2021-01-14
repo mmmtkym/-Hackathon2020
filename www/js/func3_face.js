@@ -47,7 +47,7 @@ function ohayou3() {
 
 var emo=[7];
 var max;
-var emotio=0;
+var emotion=0;
 
 function azureFunc(file){
 var area = "westus"; 
@@ -103,8 +103,7 @@ $.ajax({
        emo[6] = Math.floor(data["0"].faceAttributes.emotion.sadness * 100);      
        // 感嘆
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
-        //露出度
-        exp=Math.floor(data["0"].faceAttributes.exposure.value * 100);
+       
 
 
     }
@@ -140,7 +139,9 @@ if(emotion==6){
 if(emotion==7){
   alert("感嘆");
 }
- alert(exp);
+if(data["0"].faceAttributes.occlusion.mouthOccluded==false){
+ alert("鼻まで隠して");
+}
 })
 //失敗時！
 .fail(function(jqXHR, textStatus, errorThrown) {

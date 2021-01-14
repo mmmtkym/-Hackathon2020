@@ -2,6 +2,49 @@
 function ohayou3() {
   alert("Hello3!");
 
+// カメラ準備
+    var options = {
+      destinationType: Camera.DestinationType.DATA_URL,
+      encodingType: 0     // 0=JPG 1=PNG
+    };   
+
+    // カメラ起動
+    navigator.camera.getPicture(onSuccess, onFail, options);
+
+    // 成功時処理
+    function onSuccess (imageData) {
+        // Blobを作成
+        var byteCharacters = toBlob(imageData);
+
+        // Azureに画像データを送る関数
+        azureFunc(byteCharacters);
+    }
+
+    // エラー時処理
+    function onFail (message) {
+        console.log (message);
+    }
+
+    // Blob作成関数
+    function toBlob(base64) {
+        var blob;
+        var bin = atob(base64.replace(/^.*,/, ''));
+        var buffer = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) {
+            buffer[i] = bin.charCodeAt(i);
+        }
+        // Blobを作成
+        try{
+            blob = new Blob([buffer.buffer], {
+                type: 'image/png'
+            });
+        }catch (e){
+            return false;
+        }
+        return blob;
+    }
+
+
 var age = 0;                // 年齢'
 var gender = 0;             // 性別 （male/female)
 var emoSmile = 0;           // 笑顔'

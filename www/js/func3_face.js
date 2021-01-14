@@ -103,7 +103,8 @@ $.ajax({
        emo[6] = Math.floor(data["0"].faceAttributes.emotion.sadness * 100);      
        // 感嘆
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
-       //露出度
+        //露出度
+        exp=Math.floor(data["0"].faceAttributes.exposure.value * 100);
 
 
     }
@@ -139,6 +140,7 @@ if(emotion==6){
 if(emotion==7){
   alert("感嘆");
 }
+ alert(exp);
 })
 //失敗時！
 .fail(function(jqXHR, textStatus, errorThrown) {

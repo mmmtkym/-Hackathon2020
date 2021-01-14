@@ -115,5 +115,9 @@ function ohayou3() {
   alert("Hello3!");
 
   alert("Hello1!");
+<<<<<<< HEAD
+}
+>>>>>>> cb7920446ebb2ca9b9eb14e374d45cbe2e0700b2
+=======
 }
 >>>>>>> cb7920446ebb2ca9b9eb14e374d45cbe2e0700b2

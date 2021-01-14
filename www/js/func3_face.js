@@ -1,4 +1,6 @@
 
+function ohayou3() {
+  alert("Hello3!");
 
 var age = 0;                // 年齢'
 var gender = 0;             // 性別 （male/female)
@@ -111,3 +113,4 @@ $.ajax({
     console.log(errorString);
 });
 
+}

@@ -59,7 +59,7 @@ var uriBase = "https://" + area + ".api.cognitive.microsoft.com/face/v1.0/detect
 var params = {
     "returnFaceId": "true",
     "returnFaceLandmarks": "true",
-    "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
+    "returnFaceAttributes": "age,gender,headPose,smile,facialHair,mask,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
 };
 
 // Perform the REST API call.
@@ -112,7 +112,7 @@ $.ajax({
        //x[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.x);
       //y[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.y);
 
-   emo[8]= Math.floor(data["0"].faceAttributes.accessories.mask.confidence * 100);
+   emo[8]= Math.floor(data["0"].faceAttributes.accessories.mask * 100);
 
 
     }

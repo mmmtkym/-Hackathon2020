@@ -58,7 +58,7 @@ var uriBase = "https://" + area + ".api.cognitive.microsoft.com/face/v1.0/detect
      
 var params = {
     "returnFaceId": "true",
-    "returnFaceLandmarks": "false",
+    "returnFaceLandmarks": "true",
     "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
 };
 
@@ -112,9 +112,10 @@ $.ajax({
       x[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.x);
       y[1]= Math.floor(data["0"].faceLandmarks.UnderLipBottom.y);
 
-
-
-
+alert(x[0]);
+alert(x[1]);
+alert(y[0]);
+alert(y[1]);
     }
     max=emo[0];
     // FaceAPIから取得した情報を使います

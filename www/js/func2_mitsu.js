@@ -9,9 +9,7 @@ function getCurrentPosition() {
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
     // 現在地取得に成功した場合の処理
     function onSuccess(position) {
-      //var countup = function(){
       alert("計測開始");
-      //do{
       // 緯度
       var latitude = position.coords.latitude;
       // 経度
@@ -29,9 +27,8 @@ function getCurrentPosition() {
   }
 }
 
-function funcMistu1() {
+function funcMitsu1(flag) {
   alert("Hello2!");
-  var flag = 1;
   if (flag === 1) {
     document.addEventListener("deviceready", function () {
       window.timer = setInterval(getCurrentPosition, 3000);
@@ -39,8 +36,7 @@ function funcMistu1() {
   }
 }
 
-function funcMistu2() {
-  var flag = 1;
+function funcMitsu2(flag) {
   if (flag === 1) {
     document.addEventListener("deviceready", function () {
       //配列を用意する

@@ -154,7 +154,7 @@ if(emotion==7){
 
     }
 
-    else if(emo[8]==true){
+    else if(y[0]>0){
      alert("鼻まで装着してください");
     } else{
   alert("マスクは正しく装着されています");

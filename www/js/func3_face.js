@@ -107,11 +107,11 @@ $.ajax({
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
        emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
 
-       x[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.x);
+       y[1]= data["0"].accessories.type;
        y[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
       //x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
      // y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);
-
+alert(y[1]);
 
     }
     max=emo[0];

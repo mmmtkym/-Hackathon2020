@@ -117,14 +117,8 @@ alert(emo[8]);
     }
     max=emo[0];
     // FaceAPIから取得した情報を使います
-    if(!(y[0]>0)){
-  alert("マスクは正しく装着されています");
-    }
-
-    else if(emo[8]==true){
-      alert("鼻まで装着してください");
-    } else{
-   for(var i=1;i<7;i++){
+    if(y[0]>0 && emo[8]==false){
+         for(var i=1;i<7;i++){
 if(max<emo[i]){
   max=emo[i];
   emotion=i;
@@ -155,6 +149,13 @@ if(emotion==7){
   alert("感嘆");
 }
  alert("マスクちゃんとつけて！！！！！");
+
+    }
+
+    else if(emo[8]==true){
+      alert("鼻まで装着してください");
+    } else{
+  alert("マスクは正しく装着されています");
     }
 })
 

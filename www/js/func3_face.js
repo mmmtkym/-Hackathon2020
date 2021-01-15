@@ -118,7 +118,12 @@ $.ajax({
      alert(mask);
     max=emo[0];
     // FaceAPIから取得した情報を使います
-    if(y[0]>0 && emo[8]==false){
+    if(mask=="mask"){
+      if( y[0]>0){
+         alert("鼻まで装着してください");
+      }else{alert("マスクは正しく装着されています");}
+    }else{
+   // if(y[0]>0 && emo[8]==false){
          for(var i=1;i<7;i++){
 if(max<emo[i]){
   max=emo[i];
@@ -153,11 +158,11 @@ if(emotion==7){
 
     }
 
-    else if(emo[8]==true){
-      alert("鼻まで装着してください");
-    } else{
-  alert("マスクは正しく装着されています");
-    }
+   // else if(emo[8]==true){
+    //  alert("鼻まで装着してください");
+    //} else{
+ // alert("マスクは正しく装着されています");
+   // }
 })
 
 

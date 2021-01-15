@@ -109,8 +109,8 @@ $.ajax({
 
        x[0]= Math.floor(data["0"].faceLandmarks.noseTip.x);
        y[0]= Math.floor(data["0"].faceLandmarks.noseTip.y);
-      //x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
-      //y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);
+      x[1]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.x);
+      y[1]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
 
 
     
@@ -154,7 +154,7 @@ if(emotion==7){
 
     }
 
-    else if(y[0]>900 || x[0]>900){
+    else if(y[0]>900 || x[0]>900 || x[1]>200 || y[1]>200){
      alert("マスクを鼻まで装着してください！！");
     } else{
   alert("マスクは正しく装着されています♡");

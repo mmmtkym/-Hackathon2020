@@ -50,7 +50,7 @@ var max;
 var emotion=0;
 var x=[2];
 var y=[2];
-var mask
+
 function azureFunc(file){
 var area = "westus"; 
 var subscriptionKey = "0a50c6d56ddb41c98f952861abe8c050" 
@@ -107,7 +107,7 @@ $.ajax({
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
        emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
 
-       mask = Math.floor(data["0"].faceAttributes.accessories.type.mask.confidence * 100);
+      
        y[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
       //x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
      // y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);
@@ -115,7 +115,7 @@ $.ajax({
 
     
     }
-     alert(mask);
+    
     max=emo[0];
     // FaceAPIから取得した情報を使います
   

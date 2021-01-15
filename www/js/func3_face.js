@@ -105,20 +105,26 @@ $.ajax({
        emo[6] = Math.floor(data["0"].faceAttributes.emotion.sadness * 100);      
        // 感嘆
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
-      // emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
+       emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
 
-       x[0]= Math.floor(data["0"].faceLandmarks.noseTip.x);
-       y[0]= Math.floor(data["0"].faceLandmarks.noseTip.y);
-      x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
-      y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);
+       x[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.x);
+       y[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
+      //x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
+     // y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);
 alert(y[0]);
-alert(y[1]);
+alert(emo[8]);
 
     }
     max=emo[0];
     // FaceAPIから取得した情報を使います
-    if(y[0]>0 && y[1]>0){
-       for(var i=1;i<7;i++){
+    if(y[0]){
+  alert("マスクは正しく装着されています");
+    }
+
+    else if(emo[8]==true){
+      alert("鼻まで装着してください");
+    } else{
+   for(var i=1;i<7;i++){
 if(max<emo[i]){
   max=emo[i];
   emotion=i;
@@ -149,12 +155,6 @@ if(emotion==7){
   alert("感嘆");
 }
  alert("マスクちゃんとつけて！！！！！");
-    }
-
-    else if(y[0]>0){
-      alert("鼻まで装着してください");
-    } else{
-  alert("マスクは正しく装着されています");
     }
 })
 

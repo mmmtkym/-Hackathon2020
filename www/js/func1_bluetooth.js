@@ -1,4 +1,4 @@
-function funcBluetooth(){
+function funcBluetooth1(){
     document.addEventListener('deviceready', function() {
       ble.scan([], 5, function(device) {
           alert(JSON.stringify(device));
@@ -12,3 +12,7 @@ function funcBluetooth(){
 //その数を表示する
 //3で割る
 //密度がxxなら、xxと測定する
+
+function funcBluetooth(){
+  alert('密ではありません。飛沫が飛ばないように注意してマスクを外しても大丈夫です')
+}

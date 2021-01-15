@@ -7,8 +7,7 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
-    <script>
-    </script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/func1_bluetooth.js"></script>
     <script src="js/func2_mitsu.js"></script>
@@ -18,25 +17,39 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 
+   <style type="text/css">
+     html {
+       font-size: 100%;
+       font-family: "Arial", "メイリオ";
+       text-align: center;
+     }
+     h1 {
+       font-size: 4rem;
+     }
+     img {      
+       float:center;
+       max-width: 90%;
+       width: 90%;
+       cursor: pointer;
+       margin-right:2%;
+       box-sizing:border-box;
+     }
+   </style>
 </head>
 <body>
-  </br>
-  <font size="4"> 
-<b>マスクマン登場アプリ</b>
-</font><br>
-  <br />
-    <ons-button onclick="funcBluetooth();funcFace()">測定開始</ons-button>
-<br><br>
-<!-- 
-  <ons-button onclick="ohayou1();">おはよう１</ons-button>
-  <button onclick="ohayou2();">おはよう２</button>
-  <button onclick="ohayou3();">おはよう３</button>
-  -->
-  <br><br>
-換気アラート
+
+<br>
+<img src="img/logo2.png" border=”0″><br><br><br><br>
+<div style="text-align: center">
+  <img src="img/icon3.png" onclick="funcFace();"/>
+  <button onclick="funcBluetooth()">bt</button>
+</div>
+
+密回避アラート<br>
 <form name="form1">
-	<input type="radio" name="alert1" value="1" onchange="funcMitsu(1)"> ON
-	<input type="radio" name="alert1" value="2" onchange="funcMitsu(2)">  OFF
+	<input type="radio" name="alert1" value="1" onchange="funcMitsu1(1)"> ON1
+  <input type="radio" name="alert1" value="1" onchange="funcMitsu2(1)"> ON2
+	<input type="radio" name="alert1" value="2" onchange="funcMitsu(2)"> OFF
 </form>
 
 </body>

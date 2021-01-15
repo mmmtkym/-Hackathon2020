@@ -16,3 +16,6 @@ function funcBluetooth1(){
 function funcBluetooth(){
   alert('密ではありません。飛沫が飛ばないように注意してマスクを外しても大丈夫です')
 }
+function funcBluetooth2(){
+  alert('密です！マスク着用を続けましょう')
+}

@@ -121,7 +121,7 @@ $.ajax({
     max=emo[0];
     // FaceAPIから取得した情報を使います
   
-   if(y[0]>0 && emo[8]==false){
+   if(y[0]>0 && emo[8]==true){
          for(var i=1;i<7;i++){
 if(max<emo[i]){
   max=emo[i];

@@ -115,6 +115,8 @@ $.ajax({
 
     
     }
+    alert(x[0]);
+    alert(y[0]);
     
     max=emo[0];
     // FaceAPIから取得した情報を使います

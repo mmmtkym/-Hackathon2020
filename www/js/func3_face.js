@@ -107,14 +107,14 @@ $.ajax({
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
        emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
 
-       y[1]= data["0"].accessories.type;
+       var mask = data["0"].faceAttributes.accessories.type;
        y[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
       //x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
      // y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);
 
 
     }
-    alert(faceAttributes.accessories.type);
+    alert(mask);
     max=emo[0];
     // FaceAPIから取得した情報を使います
     if(y[0]>0 && emo[8]==false){

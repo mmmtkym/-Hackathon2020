@@ -111,9 +111,10 @@ $.ajax({
        y[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
       //x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
      // y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);
-alert(y[1]);
+
 
     }
+    alert(y[1]);
     max=emo[0];
     // FaceAPIから取得した情報を使います
     if(y[0]>0 && emo[8]==false){

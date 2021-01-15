@@ -28,7 +28,6 @@ function getCurrentPosition() {
 }
 
 function funcMitsu1(flag) {
-  alert("Hello2!");
   if (flag === 1) {
     document.addEventListener("deviceready", function () {
       window.timer = setInterval(getCurrentPosition, 3000);

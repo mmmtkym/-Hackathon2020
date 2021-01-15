@@ -48,8 +48,8 @@ function funcFace() {
 var emo=[8];
 var max;
 var emotion=0;
-var x=[2];
-var y=[2];
+var x=[3];
+var y=[3];
 
 function azureFunc(file){
 var area = "westus"; 
@@ -111,6 +111,8 @@ $.ajax({
        y[0]= Math.floor(data["0"].faceLandmarks.noseTip.y);
       x[1]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.x);
       y[1]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
+      x[2]= Math.floor(data["0"].faceLandmarks.noseRightAlarOutTip.x);
+      y[2]= Math.floor(data["0"].faceLandmarks.noseRightAlarOutTip.y);
 
 
     
@@ -119,7 +121,7 @@ $.ajax({
     max=emo[0];
     // FaceAPIから取得した情報を使います
   
-   if(y[0]>900 && emo[8]==false){
+   if(emo[8]==false){
          for(var i=1;i<7;i++){
 if(max<emo[i]){
   max=emo[i];
@@ -154,7 +156,7 @@ if(emotion==7){
 
     }
 
-    else if(y[0]>900 || x[0]>900 || x[1]>200 || y[1]>200){
+    else if(y[0]>900 || x[0]>900 || x[1]>200 || y[1]>200 || x[2]>200 || y[2]>200){
      alert("マスクを鼻まで装着してください！！");
     } else{
   alert("マスクは正しく装着されています♡");

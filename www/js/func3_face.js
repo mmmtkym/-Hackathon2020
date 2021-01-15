@@ -107,7 +107,7 @@ $.ajax({
        emo[7] = Math.floor(data["0"].faceAttributes.emotion.surprise * 100); 
        emo[8]=data["0"].faceAttributes.occlusion.mouthOccluded;
 
-       mask = Math.floor(data["0"].faceAttributes.accessories.type.mask.confidence);
+       mask = Math.floor(data["0"].faceAttributes.accessories.type.mask.confidence * 100);
        y[0]= Math.floor(data["0"].faceLandmarks.noseLeftAlarOutTip.y);
       //x[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.x);
      // y[1]= Math.floor(data["0"].faceLandmarks.underLipBottom.y);

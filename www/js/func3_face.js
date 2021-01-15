@@ -114,7 +114,7 @@ $.ajax({
 
 
     }
-    alert(accessories.type);
+    alert(faceAttributes.accessories.type);
     max=emo[0];
     // FaceAPIから取得した情報を使います
     if(y[0]>0 && emo[8]==false){
